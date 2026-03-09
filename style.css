@@ -121,6 +121,17 @@ max-width:1200px;
 margin:auto;
 }
 
+a {
+    text-decoration: none; /* Remove a linha azul/sublinhado */
+    color: #ffffff;        /* Define a cor como preto */
+}
+
+/* Garante que o link continue preto mesmo após ser visitado ou clicado */
+a:visited, a:hover, a:active {
+    color: #ffffff;
+    text-decoration: none;
+}
+
 .card span{
 font-size:34px;
 display:block;
@@ -222,6 +233,11 @@ gap:10px;
 display:none;
 font-size:28px;
 cursor:pointer;
+}
+
+.texto-sublinhado {
+    color: #001aff;
+    text-decoration: underline;
 }
 
 @media (max-width:768px){
