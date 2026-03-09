@@ -1,0 +1,274 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#fff;
+}
+
+/* HEADER */
+
+header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:15px 40px;
+    background:#2f3b46;
+    color:white;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+}
+
+nav a{
+    margin:0 10px;
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+}
+
+.auth a{
+    margin-left:15px;
+    text-decoration:none;
+    color:white;
+}
+
+.btn-primary{
+    background:#1da1f2;
+    padding:8px 14px;
+    border-radius:4px;
+}
+
+/* HERO */
+
+.hero{
+    height:80vh;
+    background:url("imagens/uber1.jpg") center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    position:relative;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.45);
+}
+
+.hero-content{
+    position:relative;
+    color:white;
+    max-width:700px;
+}
+
+.hero h1{
+    font-size:38px;
+    margin-bottom:30px;
+    font-weight:300;
+}
+.wolverine {
+    min-height:100vh;
+    padding:100px 20px;
+    background-image: url("imagens/uber2..jpg"); /* Nome do seu arquivo local */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    /* O SEGREDO DO PARALLAX AQUI: */
+    background-attachment: fixed; 
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.vantagens{
+padding:80px 20px;
+background:#f5f7fa;
+text-align:center;
+}
+
+.vantagens h2{
+font-size:36px;
+margin-bottom:10px;
+color:white;
+}
+
+.subtitulo{
+color:#ddd;
+margin-bottom:50px;
+}
+
+.vantagens{
+padding:80px 20px;
+text-align:center;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(10px);
+border-radius:20px;
+max-width:1200px;
+margin:auto;
+}
+
+.card span{
+font-size:34px;
+display:block;
+margin-bottom:10px;
+filter:drop-shadow(0 2px 4px rgba(0,0,0,0.7));
+}
+
+.card{
+background:rgba(0,0,0,0.45);
+backdrop-filter:blur(8px);
+padding:30px;
+border-radius:12px;
+color:rgb(5, 5, 5);
+box-shadow:0 10px 25px rgba(0,0,0,0.25);
+transition:0.3s;
+}
+
+.card h3{
+color:#ffffff;
+font-weight:700;
+letter-spacing:0.5px;
+text-shadow:0px 1px 3px rgba(0,0,0,0.7);
+}
+
+.card p{
+color:#ffffff;
+font-weight:500;
+text-shadow:0px 1px 2px rgba(0,0,0,0.6);
+}
+
+.card:hover{
+transform:translateY(-5px);
+box-shadow:0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Garante que o efeito funcione bem em dispositivos móveis */
+@media (max-width: 1024px) {
+    .hero {
+        background-attachment: scroll; /* Mobile geralmente não suporta 'fixed' bem */
+    }
+}
+
+/* BOTÕES */
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+}
+
+.btn-blue{
+    background:#1da1f2;
+    color:white;
+    padding:12px 22px;
+    text-decoration:none;
+    border-radius:4px;
+}
+
+.btn-outline{
+    border:2px solid white;
+    padding:12px 22px;
+    text-decoration:none;
+    color:white;
+    border-radius:4px;
+}
+
+/* FOOTER */
+
+footer{
+background:#2f3b46;
+color:white;
+text-align:center;
+padding:15px;
+
+}
+
+footer a{
+color:#1da1f2;
+text-decoration:none;
+}
+
+.icones img{
+width:44px;
+height:44px;
+border-radius:50%;
+object-fit:cover;
+}
+
+.icones p{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+}
+
+/* MOBILE */
+
+.menu-toggle{
+display:none;
+font-size:28px;
+cursor:pointer;
+}
+
+@media (max-width:768px){
+
+header{
+flex-direction:row;
+justify-content:space-between;
+align-items:center;
+}
+
+.menu-toggle{
+display:block;
+color:white;
+}
+
+/* menu escondido */
+
+nav,
+.auth{
+display:none;
+flex-direction:column;
+width:100%;
+background:#2f3b46;
+padding:20px;
+gap:15px;
+}
+
+nav a,
+.auth a{
+display:block;
+text-align:center;
+margin:5px 0;
+}
+
+/* menu aberto */
+
+header.active nav,
+header.active .auth{
+display:flex;
+}
+
+.hero h1{
+font-size:26px;
+}
+
+.buttons{
+flex-direction:column;
+}
+
+}
