@@ -6,16 +6,6 @@
 <title>Private Uber</title>
 <link rel="shortcut icon" href="imagens/favuber.png" type="image/x-icon">
 <link rel="stylesheet" href="style.css">
-<script defer>
-
-    const toggle = document.querySelector(".menu-toggle");
-    const header = document.querySelector("header");
-
-    toggle.addEventListener("click", () => {
-    header.classList.toggle("active");
-    });
-
-</script>
 </head>
 
 <body>
@@ -157,4 +147,14 @@
  </footer>
 
 </body>
+
+    <script>
+        const toggle = document.querySelector(".menu-toggle");
+        const header = document.querySelector("header");
+
+        toggle.addEventListener("click", () => {
+            header.classList.toggle("active");
+        });
+    </script>
+
 </html>
