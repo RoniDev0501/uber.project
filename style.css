@@ -9,43 +9,103 @@ body{
     background:#fff;
 }
 
-/* HEADER */
-
 header{
     display:flex;
     align-items:center;
     justify-content:space-between;
     padding:15px 40px;
-    background:#2f3b46;
+    background:#0D0000;
     color:white;
 }
 
-.logo{
-    font-size:22px;
-    font-weight:bold;
+.hero-content h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 100px;        /* aumente este valor */
+    font-weight: 700;
+    color: #F2C89B;
+    text-shadow:
+        1px 1px 0px #8B5E3C,
+        3px 3px 6px rgba(0,0,0,0.4);
+    line-height: 1.4;
+    letter-spacing: 1px;
+}
+
+.top-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size:30px;
+}
+
+.logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 30px;
+    font-style: italic;
+    letter-spacing: 4px;
+    color: #ffffff;
+    text-shadow:
+        2px 2px 0 #000,
+        4px 4px 0 rgba(0,0,0,0.3);
+    transform: skewX(-10deg);
+    display: inline-block;
+    position: relative;
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 60%;
+    height: 3px;
+    background: linear-gradient(to right, #1da1f2, transparent);
+    transform: skewX(-15deg);
 }
 
 nav a{
-    margin:0 10px;
+    margin:0 30px;
     color:white;
     text-decoration:none;
-    font-size:14px;
     transition: all 0.3s ease;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    font-style: italic;
+    letter-spacing: 4px;
+    color: #ffffff;
+    text-shadow:
+        2px 2px 0 #000,
+        4px 4px 0 rgba(0,0,0,0.3);
+    transform: skewX(-10deg);
+    display: inline-block;
+    position: relative;
+    
 }
 
 .auth a{
-    margin-left:15px;
-    text-decoration:none;
+    margin:0 21px;
     color:white;
+    text-decoration:none;
+    transition: all 0.3s ease;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    letter-spacing: 4px;
+    color: #ffffff;
+    text-shadow:
+        2px 2px 0 #000,
+        4px 4px 0 rgba(0,0,0,0.3);
+    transform: skewX(-10deg);
+    display: inline-block;
+    position: relative;
 }
 
 .btn-primary{
     background:#1da1f2;
     padding:8px 14px;
     border-radius:4px;
+    
+    
 }
-
-/* HERO */
 
 .hero{
     height:80vh;
@@ -55,6 +115,10 @@ nav a{
     justify-content:center;
     text-align:center;
     position:relative;
+    color: #F2C89B;                  /* cor bege/dourada */
+    text-shadow:
+        1px 1px 0px #8B5E3C,         /* sombra marrom */
+        3px 3px 6px rgba(0,0,0,0.4);
 }
 
 .hero::before{
@@ -168,15 +232,6 @@ transform:translateY(-5px);
 box-shadow:0 8px 25px rgba(0,0,0,0.15);
 }
 
-/* Garante que o efeito funcione bem em dispositivos móveis */
-@media (max-width: 1024px) {
-    .hero {
-        background-attachment: scroll; /* Mobile geralmente não suporta 'fixed' bem */
-    }
-}
-
-/* BOTÕES */
-
 .buttons{
     display:flex;
     justify-content:center;
@@ -206,29 +261,29 @@ background:#2f3b46;
 color:white;
 text-align:center;
 padding:15px;
+font-size: 25px;
 
 }
 
 footer a{
-color:#1da1f2;
+color:#070707;
 text-decoration:none;
 }
 
-.icones img{
-width:44px;
-height:44px;
-border-radius:50%;
-object-fit:cover;
+.icones img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    
 }
 
 .icones p{
 display:flex;
 align-items:center;
 justify-content:center;
-gap:10px;
+gap:05px;
 }
-
-/* MOBILE */
 
 .menu-toggle{
 display:none;
@@ -237,56 +292,101 @@ cursor:pointer;
 }
 
 .texto-sublinhado {
-    color: #001aff;
+    color: #ffffff;
     text-decoration: underline;
 }
 
 @media (max-width:768px){
 
-header{
-flex-direction:row;
-justify-content:space-between;
-align-items:center;
+    header{
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+    gap: 20px;
+    }
+
+    .top-left{
+        display:flex;
+        align-items:center;
+        justify-content:space-between; /* logo à esquerda, hamburguer à direita */
+        width:100%;                     /* ocupa toda a largura */
+        gap:20px;
+    }
+
+        .menu-toggle {
+            font-size: 26px;
+            margin-left:auto; /* empurra o hamburguer para a direita */
+        }
+
+    .hero-content {
+        padding: 0 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+    
+    .menu-toggle{
+    display:block;
+    color:white;
+    }
+
+    /* menu escondido */
+
+    nav,
+    .auth{
+    display:none;
+    flex-direction:column;
+    width:100%;
+    background:#2f3b46;
+    padding:20px;
+    gap:15px;
+    transition: all 0.3s ease;
+    }
+
+    nav a,
+    .auth a{
+    display:block;
+    text-align:center;
+    margin:5px 0;
+    }
+
+    /* menu aberto */
+
+    header.active nav,
+    header.active .auth{
+     display:flex;
+    }
+
+    .hero h1{
+        font-size:26px;
+    }
+
+    .buttons{
+        flex-direction:column;
+    }
+
+    /* footer: imagem à esquerda, texto à direita com mais espaço */
+    .icones p{
+        justify-content: space-between;
+        gap: 8px;
+        padding: 0 20px;
+    }
+
+    .icones a:first-child{
+        margin-right: auto; /* só o link da imagem vai para a esquerda */
+    }
+
 }
 
-.menu-toggle{
-display:block;
-color:white;
+@media (max-width: 1024px) {
+    .hero {
+        background-attachment: scroll; /* Mobile geralmente não suporta 'fixed' bem */
+    }
+
+    .top-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
-
-/* menu escondido */
-
-nav,
-.auth{
-display:none;
-flex-direction:column;
-width:100%;
-background:#2f3b46;
-padding:20px;
-gap:15px;
-transition: all 0.3s ease;
-}
-
-nav a,
-.auth a{
-display:block;
-text-align:center;
-margin:5px 0;
-}
-
-/* menu aberto */
-
-header.active nav,
-header.active .auth{
-display:flex;
-}
-
-.hero h1{
-font-size:26px;
-}
-
-.buttons{
-flex-direction:column;
-}
-
 }
