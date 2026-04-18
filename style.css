@@ -296,9 +296,17 @@ footer a {
 
 .icones p{
 display:flex;
+flex-direction:row;
 align-items:center;
 justify-content:center;
-gap:05px;
+gap:10px;
+}
+
+.icones p a{
+display:flex;
+flex-direction:row;
+align-items:center;
+gap:10px;
 }
 
 .menu-toggle{
